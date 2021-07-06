@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>pokemon-api | Developer Documentation</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.json-view.min.css">
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="js/highlight/styles/atom-one-dark.css">
+    <script src="js/highlight/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="https://raw.githubusercontent.com/Purukitto/pokemon-api/master/logo.png" alt="pokemon-api">
+        <nav>
+            <div class="theme-switch-wrapper">
+                <p><strong id="theme-text">Dark Mode  _</strong></p>
+                <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+                </label>
+            </div>
+            <ul class="nav__links">
+                <li><a href="index.html">Documentation</a></li>
+                <li class="active"><strong>Applet</strong></li>
+            </ul>
+
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <form id="poke-form">
+                        <div class="form-group form-input">
+                            <label for="input" class="form-label"><h4><strong>app.pokemon-api.xyz/</strong></h4></label>
+                            <input type="text" name="input" id="input" value="" required>
+                            <input type="submit" value="Fetch Data" class="submit" onclick="fetchFrontAPI($('#input').val().toLowerCase().trim())" />
+                        </div>
+                        <p>
+                            Try <a onclick="putValue('pokemon/pikachu')">pokemon/pikachu</a>, <a onclick="putValue('pokemon/500')">pokemon/500</a>, <a onclick="putValue('moves/aerialace')">moves/aerialace</a>, <a onclick="putValue('items/masterball')">items/masterball</a>,
+                            etc.
+                        </p>
+                    </form>
+                </div>
+                <div class="col-md-9">
+                    <section id="line1" class="section">
+                        <div class="pokeoutput">
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- // end container -->
+    </div>
+    <!-- end wrapper -->
+
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/wow.js "></script>
+
+
+    <!-- CUSTOM JS -->
+    <script src="js/custom.js "></script>
+    <script src="js/main.js "></script>
+    <script src="js/themes.js "></script>
+    <script src="js/jsonsamples.js"></script>
+</body>
+
+</html>

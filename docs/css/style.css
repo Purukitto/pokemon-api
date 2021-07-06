@@ -390,24 +390,3 @@ a:hover {
 .btn-info:hover {
     background-color: #656565;
 }
-
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>.active>a:focus {
-    background-color: var(--tertiary-color);
-    color: var(--bg-color);
-}
-
-.navbar-inverse {
-    background-color: var(--strong-color);
-    border: 0;
-}
-
-.navbar-inverse li.btn {
-    border-radius: 0 !important;
-    padding: 0;
-}
-
-.navbar-inverse li.btn a {
-    color: var(--bg-color) !important;
-}
